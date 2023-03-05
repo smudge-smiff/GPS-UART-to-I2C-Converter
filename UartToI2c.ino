@@ -20,8 +20,6 @@ unsigned long current_time;
 
 void setup()
 {
-  // put your setup code here, to run once:
-  x.value = 20;
   debugUART.begin(57600);
   gpsSerial.begin(GpsBAUD);
   pinMode(LED_PIN, OUTPUT);
@@ -52,7 +50,7 @@ void loop()
     start_time = current_time; // reset the timer
     hasFix();
     updateDataBuffer();
-    digitalWrite(LED_PIN, !hasFix());
+    digitalWrite(LED_PIN, !hasFix());// Inverse logic to turn LED on. False turns LED on
   }
 }
 

@@ -3,12 +3,6 @@
 
 typedef union
 {
-  double value;
-  uint8_t bytes[8];
-} DoubleUnion_t;
-
-typedef union
-{
   uint32_t value;
   uint8_t bytes[4];
 } uint32Union_t;
